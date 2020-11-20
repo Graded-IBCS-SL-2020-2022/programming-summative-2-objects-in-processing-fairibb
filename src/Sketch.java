@@ -1,5 +1,6 @@
 
 /** MAKE SURE TO READ THE README CAREFULLY BEFORE YOU BEGIN EDITING THIS CODE */
+//Hey
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
@@ -13,6 +14,17 @@ public class Sketch extends PApplet {
      */
 
     Ball b1;
+    Ball b2;
+    Ball b3;
+    Ball b4;
+    Bubble bb1;
+    Bubble bb2;
+    Bubble bb3;
+    Bubble bb4;
+    Snowflake s1;
+    Snowflake s2;
+    Snowflake s3;
+    Snowflake s4;
 
     public void settings() {
         size(500, 500);
@@ -28,6 +40,18 @@ public class Sketch extends PApplet {
     public void setup() {
         frameRate(30);
         b1 = new Ball(this);
+        b2 = new Ball(this);
+        b3 = new Ball(this);
+        b4 = new Ball(this);
+        bb1 = new Bubble(this);
+        bb2 = new Bubble(this);
+        bb3 = new Bubble(this);
+        bb4 = new Bubble(this);
+        s1 = new Snowflake (this);
+        s2 = new Snowflake (this);
+        s3 = new Snowflake (this);
+        s4 = new Snowflake (this);
+
     }
 
     public void draw() {
@@ -36,7 +60,30 @@ public class Sketch extends PApplet {
         /* SUMMATIVE REQUIRED Draw and move all balls, snowflakes, and bubbles */
         b1.drawBall();
         b1.moveBall();
+        b2.drawBall();
+        b2.moveBall();
+        b3.drawBall();
+        b3.moveBall();
+        b4.drawBall();
+        b4.moveBall();
+        bb1.drawBubble();
+        bb1.moveBubble();
+        bb2.drawBubble();
+        bb2.moveBubble();
+        bb3.drawBubble();
+        bb3.moveBubble();
+        bb4.drawBubble();
+        bb4.moveBubble();
+        s1.drawSnowflake();
+        s1.moveSnowflake();
+        s2.drawSnowflake();
+        s2.moveSnowflake();
+        s3.drawSnowflake();
+        s3.moveSnowflake();
+        s4.drawSnowflake();
+        s4.moveSnowflake();
     }
+
 
     /**
      * Convenience method to return a random color
