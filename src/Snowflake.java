@@ -1,14 +1,35 @@
+import java.util.Random;
+
 /* YOU SHOULD COMPLETE AND UNDERSTAND THE Ball.java and Bubble.java parts first! */
 /* DON'T FORGET TO RENAME THE FILE TO Snowflake.java WHEN READY TO TEST! */
-
 class Snowflake {
+    private Sketch s;
+    private float diameter;
+    private float x;
+    private float y;
+    private int col;
+    private float speedY;
+    private float speedX;
+
     /*
      * SUMMATIVE REQUIRED Implement this entire class. ONLY drawSnowflake() and
      * moveSnowflake() have been implemented for you! I recommend using your
      * Bubble.java as a template. Start by creating your instance variables and
      * constructors.
      */
-
+    public Snowflake(Sketch sketch) {
+      s = sketch;
+      diameter = s.random(20, 50);
+      x = s.random(diameter / 2, s.width - diameter / 2);
+      y = s.random(diameter / 2, s.height - diameter / 2);
+      col = s.color(255, 150);
+      speedX = s.random(-10, 10);
+      speedY = s.random(-10, 10);
+    } 
+    public float getRadius() {
+      float radius = diameter/2;
+      return radius;
+    }
     /** Draws the flake. */
     public void drawSnowflake() {
         s.stroke(col);

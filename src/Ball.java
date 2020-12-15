@@ -22,11 +22,13 @@ class Ball {
          * SUMMATIVE REQUIRED use the randomColor() method in the sketch to set default
          * balls to a solid random color
          */
-
+        col = s.randomColor(false);
         /*
          * SUMMATIVE REQUIRED Set speedX and speedY to reasonable defaults. Random
          * numbers could be nice, but are not required.
          */
+        speedX = s.random(-10, 10);
+        speedY = s.random(-10,10);
     }
 
     /** This constructor lets you specify all of the ball instance variables */
@@ -39,6 +41,10 @@ class Ball {
      * representing the radius of the ball
      */
 
+     public float getRadius() {
+       float radius = diameter/2;
+       return radius;
+     }
     /*
      * SUMMATIVE OPTIONAL Add a method called `stop()` that sets the ball speed to
      * 0, and another one called `start()` that starts it moving again, either at
